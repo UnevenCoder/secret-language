@@ -120,12 +120,20 @@ $:{
 		}
 	}
 }
+function cod(){
+alert('Copied')
+document.getElementById('co').select()
+document.execCommand('copy')
+}
 </script>
 
 <main>
 	<h3>Translate</h3>
 	<textarea bind:value={toTranslate}></textarea>
-	<p>{str}</p>
+	<textarea id='co'>{str}</textarea>
+	<button on:click={cod}>
+		Copy
+	</button>
 </main>
 
 <style>
@@ -142,7 +150,7 @@ $:{
 		min-height: 200px;
 		height:auto;
 	}
-	p{
+	#co{
 		height:250px;
 		width:400px;
 		word-wrap: inherit;
